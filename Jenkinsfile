@@ -5,18 +5,18 @@ pipeline
     node
     {
     label "QA"
+    customWorkspace('/new_project')  
     }
     }
-  stages{
+  stages
+  {
   stage('cp')
     {
-      steps{
-      sh 'sudo cp 
-      
-      
+      steps
+      {
+       sh 'sudo cp index.html /var/www/html'
       }
-      
-    }
+        }
   }
   
   
